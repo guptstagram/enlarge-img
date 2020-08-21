@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <input type="file" oninput="imageUploaded(this)" accept="image/*">
+    <img id="upldImg">
+    <button type="button" onclick="drawCanvasButtonClicked()">Draw Canvas</button>
+    <canvas id="imgcanvas"></canvas>
+    <button type="button" onclick="readCanvasPixels()">Run Run...</button>
+    <canvas id="vctcanvas"></canvas>
+    <script src="./script.js"></script>
+</body>
+</html>
