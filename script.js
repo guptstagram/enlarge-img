@@ -22,18 +22,19 @@ const readCanvasPixels=()=>{
     let imgcvs=document.querySelector("#imgcanvas");
     let vctctx=vctcvs.getContext("2d");
     let imgctx=imgcvs.getContext("2d");
-    vctctx.canvas.width  = imgctx.canvas.width*10;
-    vctctx.canvas.height = imgctx.canvas.height*10;
+    vctctx.canvas.width  = imgctx.canvas.width;
+    vctctx.canvas.height = imgctx.canvas.height;
 
     // let imgclr=imgctx.getImageData(0, 0, 1, 1).data;
     // console.log(imgclr);
     // vctctx.putImageData(imgctx.getImageData(0, 0, 1, 1),0,0,0,0,1,1);
     // console.log(vctctx.getImageData(0,0,1,1));
+    console.log(imgctx.canvas.height,imgctx.canvas.width);
     for(let i=0;i<imgctx.canvas.height;i++){
         for(let j=0;j<imgctx.canvas.width;j++){
             console.log(i,j);
             let imgclr=imgctx.getImageData(i, j, i+1, j+1);
-            vctctx.putImageData(imgclr,0,0,i*10,j*10,10,10);
+            vctctx.putImageData(imgclr,0,0,i,j,1,1);
         }
     }
     console.log("done");
